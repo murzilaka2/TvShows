@@ -1,0 +1,10 @@
+﻿@using TvShows.ViewModels;
+@model StatisticsViewModel
+
+<ul class="list-group">
+    <li class="list-group-item active">Total TV shows: @Model.TotalCount</li>
+    @foreach (KeyValuePair<Genre, int> item in Model.GenreCount)
+    {
+        <li class="list-group-item">@item.Key - @item.Value</li>
+    }
+</ul>
